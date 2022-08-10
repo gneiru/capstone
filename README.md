@@ -1,3 +1,3 @@
 # capstone
 
-sql file is located from sql foler
+sql file is located from sql folder
