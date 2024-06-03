@@ -1,14 +1,11 @@
 <?php
 error_reporting(0);
-$Server = "127.0.0.1";
-$Username = "root";
-$Password = "";
-$DB = "cgs1"; //name of database
+$Server = $_ENV['HOST'];
+$Username = $_ENV['USERNAME'];
+$Password = $_ENV['PASSWORD'];
+$DB = $_ENV['DB']; //name of database
 $Connection = mysqli_connect($Server, $Username, $Password, $DB);
 
-if (!$Connection)
-	{
+if (!$Connection) {
 	die("Connection Failed: " . mysqli_connect_error());
-	}
-
-?>
+}
